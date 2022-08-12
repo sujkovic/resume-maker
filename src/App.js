@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
+import './style.css';
 
 class App extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         <Form />
       </div>
     );
