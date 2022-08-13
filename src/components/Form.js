@@ -4,16 +4,13 @@ import Education from './Education';
 import Experience from './Experience';
 
 class Form extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
+        const { onChangeFunc } = this.props;
         return (
             <form>
-                <GeneralInfo />
-                <Education />
-                <Experience />
+                <GeneralInfo onChange={onChangeFunc}/>
+                <Education onChange={onChangeFunc}/>
+                <Experience onChange={onChangeFunc}/>
             </form>
         );
     };

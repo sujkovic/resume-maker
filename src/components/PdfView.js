@@ -32,3 +32,7 @@ class PdfView extends Component {
 }
 
 export default PdfView
+
+
+//  pdf viewer doesnt instant render changes like normal react elements, so save pdf for the final save
+    //  instead, have a regular react component that updates instantly and matches the pdf content. should not be too bad

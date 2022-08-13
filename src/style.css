@@ -8,5 +8,21 @@
 .app {
     font-family: 'Inter', sans-serif;
     display: flex;
+    height: 100vh;
 }
 
+form {
+    height: 75vh;
+    width: 30vw;
+}
+
+.PdfPreview {
+    height: 75vh;
+    width: 30vw;
+    border: 1px black solid;
+}
+
+.PdfView {
+    height: 75vh;
+    width: 30vw;
+}
