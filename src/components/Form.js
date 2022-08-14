@@ -4,13 +4,21 @@ import Education from './Education';
 import Experience from './Experience';
 
 class Form extends Component {
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange = (e) => {
+        this.props.handleChange(e);
+    };
+
     render() {
-        const { onChangeFunc } = this.props;
         return (
             <form>
-                <GeneralInfo onChange={onChangeFunc}/>
-                <Education onChange={onChangeFunc}/>
-                <Experience onChange={onChangeFunc}/>
+                <GeneralInfo handleChange={this.handleChange} />
+                <Education handleChange={this.handleChange} />
+                <Experience handleChange={this.handleChange} />
             </form>
         );
     };
