@@ -6,16 +6,20 @@ class Experience extends Component {
         <fieldset>
             <legend>Work Experience</legend>
             <p>
-                <label htmlFor='company'>Company Name</label>
-                <input type='text' name='company' className='company' onChange={this.props.handleChange} value={this.props.form.company}></input>
-            </p>
-            <p>
                 <label htmlFor='position'>Position</label>
                 <input type='text' name='position' className='position' onChange={this.props.handleChange} value={this.props.form.position}></input>
             </p>
             <p>
+                <label htmlFor='company'>Company Name</label>
+                <input type='text' name='company' className='company' onChange={this.props.handleChange} value={this.props.form.company}></input>
+            </p>
+            <p>
                 <label htmlFor='yearsWorked'>Duration of Work</label>
                 <input type='text' name='yearsWorked' className='yearsWorked' onChange={this.props.handleChange} value={this.props.form.yearsWorked}></input>
+            </p>
+            <p>
+                <label htmlFor='companyLocation'>Location</label>
+                <input type='text' name='companyLocation' className='companyLocation' onChange={this.props.handleChange} value={this.props.form.companyLocation}></input>
             </p>
             <p>
                 <label htmlFor='bulletOne'>Bullet Point One</label>

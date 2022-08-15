@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 import PdfPreview from './components/PdfPreview';
 import PdfView from './components/PdfView';
-import { PDFViewer } from '@react-pdf/renderer';
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
 
 import './style.css';
 
@@ -20,12 +21,26 @@ class App extends Component {
           schoolLocation: 'Binghamton, New York',
           degree: 'Bachelor\'s of Science in Computer Science',
           yearsAttended: '2020-2024',
-          company: '',
-          position: '',
-          yearsWorked: '',
-          bulletOne: '',
-          bulletTwo: '',
-          bulletThree: '',
+          technicalOne: 'Languages',
+          technicalTwo: 'Frameworks',
+          technicalThree: 'Skills',
+          technicalOneText: 'C++, JavaScript, HTML, CSS',
+          technicalTwoText: 'React, Node.js',
+          technicalThreeText: 'Git, Bash, Webpack, VS Code, Adobe Suite',
+          company: 'Google',
+          position: 'Software Engineer Intern',
+          companyLocation: 'New York, NY',
+          yearsWorked: 'May 2023 - July 2023',
+          bulletOne: 'worked for gogle',
+          bulletTwo: 'made program go brrrrr',
+          bulletThree: 'beep boop beep boop 100101011',
+          projectName: 'Resume Builder',
+          projectLanguages: 'Javascript, React, React-pdf, CSS, Git',
+          projectDate: 'August 2022',
+          projectBulletOne: '',
+          projectBulletTwo: '',
+          projectBulletThree: '',
+          
       },
     };
   }
@@ -47,7 +62,7 @@ class App extends Component {
         <PDFViewer className='PdfView'>
           <PdfView form={this.state.form} />
         </PDFViewer>
-        <div>{this.state.form.name} a</div>
+        {/* <PDFDownloadLink document={<PdfView form={this.state.form} />} fileName='resume.pdf'>Download</PDFDownloadLink> */}
       </div>
     );
   };
