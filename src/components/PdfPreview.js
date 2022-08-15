@@ -6,15 +6,25 @@ class PdfPreview extends Component {
     return (
         <div className='PdfPreview'>
             <div className='sectionOne'>
-                <div className='viewName'>{form.name}a</div>
+                <div className='viewName'>{form.name}</div>
                 <div className='viewGeneralInfo'>
-                    <div className='viewPhone'>{form.phone}b</div>
-                    <a className='viewWebsite' href={form.website}>{form.website}c</a>
-                    <div className='viewEmail'>{form.email}d</div>
+                    <div className='viewPhone'>{form.phone}</div>
+                    <a className='viewWebsite' href={form.website}>{form.website}</a>
+                    <div className='viewEmail'>{form.email}</div>
                 </div>
             </div>
             <div className='sectionTwo'>
-
+                <div className='viewEducationTitle'>Education</div>
+                <div className='viewEducationWrapper'>
+                    <div className='viewSchoolWrapperOne'>
+                        <div className='viewSchool'>{form.school}</div>
+                        <div className='viewSchoolLocation'>{form.location}</div>
+                    </div>
+                    <div className='schoolWrapperTwo'>
+                        <div className='viewDegree'>{form.degree}</div>
+                        <div className='viewYearsAttended'>{form.yearsAttended}</div>
+                    </div>
+                </div>
             </div>
             <div className='sectionThree'>
 

@@ -12,11 +12,11 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       form: {
-          name: '',
-          email: '',
-          phone: '',
-          website: '',
-          school: '',
+          name: 'John',
+          email: 'Doe',
+          phone: '123-456-7890',
+          website: 'github.com',
+          schoolLocation: '',
           location: '',
           degree: '',
           yearsAttended: '',
@@ -27,24 +27,22 @@ class App extends Component {
           bulletTwo: '',
           bulletThree: '',
       },
-      among: '',
     };
   }
 
   handleChange = (e) => {
     const val = e.target.value;
     const nam = e.target.name;
-    this.setState({
-      form: {
-        [nam]: val,
-      },
-    });
+    let newState = Object.assign({}, this.state);
+    newState.form[nam] = val;
+    this.setState(newState);
+
   };
 
   render() {
     return (
       <div className='app'>
-        <Form handleChange={this.handleChange} />
+        <Form handleChange={this.handleChange} form={this.state.form} />
         <PdfPreview form={this.state.form} />
         <PDFViewer className='PdfView'>
           <PdfView/>

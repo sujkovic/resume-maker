@@ -16,7 +16,7 @@ class Form extends Component {
     render() {
         return (
             <form>
-                <GeneralInfo handleChange={this.handleChange} />
+                <GeneralInfo handleChange={this.handleChange} form={this.props.form} />
                 <Education handleChange={this.handleChange} />
                 <Experience handleChange={this.handleChange} />
             </form>
