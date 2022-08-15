@@ -18,9 +18,9 @@ class PdfPreview extends Component {
                 <div className='viewEducationWrapper'>
                     <div className='viewSchoolWrapperOne'>
                         <div className='viewSchool'>{form.school}</div>
-                        <div className='viewSchoolLocation'>{form.location}</div>
+                        <div className='viewSchoolLocation'>{form.schoolLocation}</div>
                     </div>
-                    <div className='schoolWrapperTwo'>
+                    <div className='viewSchoolWrapperTwo'>
                         <div className='viewDegree'>{form.degree}</div>
                         <div className='viewYearsAttended'>{form.yearsAttended}</div>
                     </div>

@@ -17,8 +17,8 @@ class Form extends Component {
         return (
             <form>
                 <GeneralInfo handleChange={this.handleChange} form={this.props.form} />
-                <Education handleChange={this.handleChange} />
-                <Experience handleChange={this.handleChange} />
+                <Education handleChange={this.handleChange} form={this.props.form} />
+                <Experience handleChange={this.handleChange} form={this.props.form} />
             </form>
         );
     };

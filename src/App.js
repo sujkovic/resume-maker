@@ -12,14 +12,14 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       form: {
-          name: 'John',
-          email: 'Doe',
+          name: 'John Doe',
+          email: 'johndoe4@gmail.com',
           phone: '123-456-7890',
           website: 'github.com',
-          schoolLocation: '',
-          location: '',
-          degree: '',
-          yearsAttended: '',
+          school: 'Binghamton University',
+          schoolLocation: 'Binghamton, New York',
+          degree: 'Bachelor\'s of Science in Computer Science',
+          yearsAttended: '2020-2024',
           company: '',
           position: '',
           yearsWorked: '',
