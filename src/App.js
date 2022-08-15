@@ -45,7 +45,7 @@ class App extends Component {
         <Form handleChange={this.handleChange} form={this.state.form} />
         <PdfPreview form={this.state.form} />
         <PDFViewer className='PdfView'>
-          <PdfView/>
+          <PdfView form={this.state.form} />
         </PDFViewer>
         <div>{this.state.form.name} a</div>
       </div>
