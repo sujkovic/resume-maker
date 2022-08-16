@@ -2,6 +2,7 @@
   "name": "resume-maker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://{sujkovic}.github.io/{resume-maker}",
   "dependencies": {
     "@craco/craco": "^6.4.5",
     "@react-pdf/renderer": "^2.3.0",
@@ -23,7 +24,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
