@@ -1,7 +1,19 @@
 import React, { Component } from 'react'
-import { Page, Text, Link, View, Document, StyleSheet } from '@react-pdf/renderer';
+import RobotoRegular from '../fonts/Roboto-Regular.ttf';
+import RobotoBold from '../fonts/Roboto-Bold.ttf';
+import RobotoItalic from '../fonts/Roboto-Italic.ttf';
+import { Page, Text, Link, Font, View, Document, StyleSheet } from '@react-pdf/renderer';
 
-
+Font.register({
+    family: 'Roboto',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    fonts: [
+        { src: RobotoRegular },
+        { src: RobotoBold, fontWeight: 'bold' },
+        {src: RobotoItalic, fontStyle: 'italic'},
+    ],
+});
 const styles = StyleSheet.create({
     page: {
         fontSize: 11,
@@ -54,7 +66,7 @@ const styles = StyleSheet.create({
     },
     experienceBottom: {
         flexDirection: 'column',
-        paddingLeft: 16,
+        paddingLeft: 24,
     },
     sectionFour: {
         paddingTop: 12,
@@ -136,6 +148,7 @@ class PdfView extends Component {
                         </View>
                     </View>
                 </View>
+                {/*           EXPERIENCE          */}
                 <View style={styles.sectionThree}>
                     <Text style={{ borderBottom: '1px black solid', fontSize: 14 }}>Experience</Text>
                     <View style={styles.experience}>
@@ -153,7 +166,39 @@ class PdfView extends Component {
                             <Text>• {form.bulletThree}</Text>
                         </View>
                     </View>
+                    <View style={styles.experience}>
+                        <View style={styles.experienceTopOne}>
+                            <Text style={{ fontWeight: 'bold' }}>{form.position2}</Text>
+                            <Text>{form.yearsWorked2}</Text>
+                        </View>
+                        <View style={styles.experienceTopTwo}>
+                            <Text>{form.company2}</Text>
+                            <Text>{form.companyLocation2}</Text>
+                        </View>
+                        <View style={styles.experienceBottom}>
+                            <Text style={{paddingBottom: 2}}>• {form.bulletOne2}</Text>
+                            <Text style={{paddingBottom: 2}}>• {form.bulletTwo2}</Text>
+                            <Text>• {form.bulletThree2}</Text>
+                        </View>
+                    </View>
+                    <View style={styles.experience}>
+                        <View style={styles.experienceTopOne}>
+                            <Text style={{ fontWeight: 'bold' }}>{form.position3}</Text>
+                            <Text>{form.yearsWorked3}</Text>
+                        </View>
+                        <View style={styles.experienceTopTwo}>
+                            <Text>{form.company3}</Text>
+                            <Text>{form.companyLocation3}</Text>
+                        </View>
+                        <View style={styles.experienceBottom}>
+                            <Text style={{paddingBottom: 2}}>• {form.bulletOne3}</Text>
+                            <Text style={{paddingBottom: 2}}>• {form.bulletTwo3}</Text>
+                            <Text>• {form.bulletThree3}</Text>
+                        </View>
+                    </View>
                 </View>
+                
+                {/*      PROJECTS      */}
                 <View style={styles.sectionFive}>
                     <Text style={{ borderBottom: '1px black solid', fontSize: 14 }}>Projects</Text>
                     <View style={styles.projects}>
@@ -170,6 +215,20 @@ class PdfView extends Component {
                             <Text style={{}}>• {form.projectBulletThree}</Text>
                         </View>
                     </View>
+                    <View style={styles.projects}>
+                        <View style={styles.projectsTop}>
+                            <View style={{flexDirection: 'row'}}>
+                                <Text style={{ fontWeight: 'bold', borderRight: '1px solid black', paddingRight: 6 }}>{form.projectName2}</Text>
+                                <Text style={{ fontWeight: 'italic', paddingLeft: 6 }}>{form.projectLanguages2}</Text>
+                            </View>
+                            <Text>{form.projectDate2}</Text>
+                        </View>
+                        <View style={styles.projectsBottom}>
+                            <Text style={{}}>• {form.projectBulletOne2}</Text>
+                            <Text style={{}}>• {form.projectBulletTwo2}</Text>
+                            <Text style={{}}>• {form.projectBulletThree2}</Text>
+                        </View>
+                    </View>
                 </View>
             </Page>
         </Document>
@@ -178,7 +237,3 @@ class PdfView extends Component {
 }
 
 export default PdfView
-
-
-//  pdf viewer doesnt instant render changes like normal react elements, so save pdf for the final save
-    //  instead, have a regular react component that updates instantly and matches the pdf content. should not be too bad

@@ -3,7 +3,10 @@ import GeneralInfo from './GeneralInfo';
 import Education from './Education';
 import Technical from './Technical';
 import Experience from './Experience';
+import ExperienceTwo from './ExperienceTwo';
+import ExperienceThree from './ExperienceThree';
 import Projects from './Projects';
+import ProjectsTwo from './ProjectsTwo';
 
 class Form extends Component {
     constructor(props) {
@@ -22,7 +25,10 @@ class Form extends Component {
                 <Education handleChange={this.handleChange} form={this.props.form} />
                 <Technical handleChange={this.handleChange} form={this.props.form} />
                 <Experience handleChange={this.handleChange} form={this.props.form} />
+                <ExperienceTwo handleChange={this.handleChange} form={this.props.form} />
+                <ExperienceThree handleChange={this.handleChange} form={this.props.form} />
                 <Projects handleChange={this.handleChange} form={this.props.form} />
+                <ProjectsTwo handleChange={this.handleChange} form={this.props.form} />
             </form>
         );
     };

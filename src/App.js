@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
 import Form from './components/Form';
 import PdfPreview from './components/PdfPreview';
 import PdfView from './components/PdfView';
-import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
-import ReactPDF from '@react-pdf/renderer';
+import { PDFDownloadLink, PDFViewer} from '@react-pdf/renderer';
 
 import './style.css';
 
@@ -28,18 +28,38 @@ class App extends Component {
           technicalTwoText: 'React, Node.js',
           technicalThreeText: 'Git, Bash, Webpack, VS Code, Adobe Suite',
           company: 'Google',
+          company2: 'Amazon',
+          company3: 'NYC DOE',
           position: 'Software Engineer Intern',
+          position2: 'Software Engineer Intern',
+          position3: 'IT Specialist',
           companyLocation: 'New York, NY',
+          companyLocation2: 'Boston, MA',
+          companyLocation3: 'New York, NY',
           yearsWorked: 'May 2023 - July 2023',
+          yearsWorked2: 'May 2022 - July 2022',
+          yearsWorked3: 'December 2022 - January 2023',
           bulletOne: 'worked for gogle',
           bulletTwo: 'made program go brrrrr',
           bulletThree: 'beep boop beep boop 100101011',
+          bulletOne2: 'worked for gogle',
+          bulletTwo2: 'made program go brrrrr',
+          bulletThree2: 'beep boop beep boop 100101011',
+          bulletOne3: 'worked for gogle',
+          bulletTwo3: 'made program go brrrrr',
+          bulletThree3: 'beep boop beep boop 100101011',
           projectName: 'Resume Builder',
+          projectName2: 'Weather App',
           projectLanguages: 'Javascript, React, React-pdf, CSS, Git',
+          projectLanguages2: 'Python, Django, Bootstrap, Git',
           projectDate: 'August 2022',
-          projectBulletOne: '',
-          projectBulletTwo: '',
-          projectBulletThree: '',
+          projectDate2: 'September 2022 - November 2022',
+          projectBulletOne: 'Made the program that made this resume :O',
+          projectBulletTwo: 'Used react and react-pdf to export it',
+          projectBulletThree: 'Very easy to use!',
+          projectBulletOne2: 'Made a weather app!!',
+          projectBulletTwo2: 'It tells you the weather anywhere',
+          projectBulletThree2: 'Even Antarctica!',
           
       },
     };
@@ -57,12 +77,15 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Form handleChange={this.handleChange} form={this.state.form} />
-        <PdfPreview form={this.state.form} />
-        <PDFViewer className='PdfView'>
-          <PdfView form={this.state.form} />
-        </PDFViewer>
-        {/* <PDFDownloadLink document={<PdfView form={this.state.form} />} fileName='resume.pdf'>Download</PDFDownloadLink> */}
+        <Header />
+        <div class="body">
+          <Form handleChange={this.handleChange} form={this.state.form} />
+          {/* <PdfPreview form={this.state.form} /> */}
+          <PDFViewer className='PdfView'>
+            <PdfView form={this.state.form} />
+          </PDFViewer>
+        </div>
+        {/* <PDFDownloadLink className='downloadBtn' document={<PdfView form={this.state.form} />} fileName='resume.pdf'>Download</PDFDownloadLink> */}
       </div>
     );
   };

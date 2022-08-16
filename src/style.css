@@ -12,12 +12,39 @@
 .app {
     font-family: 'Inter', sans-serif;
     display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 
+header {
+    height: 72px;
+    background-color: darkslategray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    letter-spacing: 1.5pt;
+}
+
+.body {
+    height: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
 form {
-    height: 75vh;
-    width: 30vw;
+    border: black 1px solid;
+    max-height: 85vh;
+    width: 40vw;
+    padding: 16px;
+}
+
+.PdfView {
+    height: 85vh;
+    width: 32vw;
 }
 
 .PdfPreview {
@@ -75,6 +102,16 @@ form {
     flex-direction: column;
 }
 
+.subCategory {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subCategory p {
+    display: flex;
+    gap: 10px;
+}
+
 .viewEducationTitle {
     border-bottom: 1px black solid;
     margin: 4px 4px 0 4px;
@@ -106,8 +143,34 @@ form {
     width: 100%;
 }
 
+/*          Projects            */
 
-.PdfView {
-    height: 75vh;
-    width: 30vw;
+.fieldset {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subCategoryTwo p {
+    display: flex;
+    gap: 10px;
+}
+
+/*          Technical Experience          */
+
+.technicalCategories {
+    display: flex;
+    gap: 12px;
+}
+
+.downloadBtn {
+    height: 50px;
+    width: 100px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: black 1px solid;
+    border-radius: 12px;
 }

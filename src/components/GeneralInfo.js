@@ -14,22 +14,26 @@ class GeneralInfo extends Component {
     return (
         <fieldset>
             <legend>General Information</legend>
-            <p>
-                <label htmlFor='name'>Name</label>
-                <input type='text' name='name' className='name' onChange={this.handleChange} value={this.props.form.name}></input>
-            </p>
-            <p>
-                <label htmlFor='email'>Email</label>
-                <input type='text' name='email' className='email' onChange={this.handleChange} value={this.props.form.email}></input>
-            </p>
-            <p>
-                <label htmlFor='phone'>Phone</label>
-                <input type='text' name='phone' className='phone' onChange={this.handleChange} value={this.props.form.phone}></input>
-            </p>
-            <p>
-                <label htmlFor='website'>Website</label>
-                <input type='text' name='website' className='website' onChange={this.handleChange} value={this.props.form.website}></input>
-            </p>
+            <div class="subCategory">
+                <p>
+                    <label htmlFor='name'>Name</label>
+                    <input type='text' name='name' className='name' onChange={this.handleChange} value={this.props.form.name}></input>
+                </p>
+                <p>
+                    <label htmlFor='email'>Email</label>
+                    <input type='text' name='email' className='email' onChange={this.handleChange} value={this.props.form.email}></input>
+                </p>
+            </div>
+            <div class="subCategory">
+                <p>
+                    <label htmlFor='phone'>Phone</label>
+                    <input type='text' name='phone' className='phone' onChange={this.handleChange} value={this.props.form.phone}></input>
+                </p>
+                <p>
+                    <label htmlFor='website'>Website</label>
+                    <input type='text' name='website' className='website' onChange={this.handleChange} value={this.props.form.website}></input>
+                </p>
+            </div>
         </fieldset>
     )
   }
