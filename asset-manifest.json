@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/%7Bresume-maker%7D/static/css/main.1a0b5a6c.css",
+    "main.js": "/%7Bresume-maker%7D/static/js/main.0afa7800.js",
+    "static/media/Roboto-Italic.ttf": "/%7Bresume-maker%7D/static/media/Roboto-Italic.87f3afe16a8c3c370634.ttf",
+    "static/media/Roboto-Regular.ttf": "/%7Bresume-maker%7D/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Roboto-Bold.ttf": "/%7Bresume-maker%7D/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "index.html": "/%7Bresume-maker%7D/index.html",
+    "main.1a0b5a6c.css.map": "/%7Bresume-maker%7D/static/css/main.1a0b5a6c.css.map",
+    "main.0afa7800.js.map": "/%7Bresume-maker%7D/static/js/main.0afa7800.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a0b5a6c.css",
+    "static/js/main.0afa7800.js"
+  ]
+}
